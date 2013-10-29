@@ -1,0 +1,25 @@
+rspec -I. pruebas_rspec/rspec_pruebas.rb
+............F....
+
+Failures:
+
+  1) Fraccion#Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
+     Failure/Error: fracr = @F % @F1
+     NoMethodError:
+       undefined method `%' for #<Fraccion:0xa15ee38 @num=4, @denom=7>
+     # ./pruebas_rspec/rspec_pruebas.rb:103:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00644 seconds
+17 examples, 1 failure
+
+Failed examples:
+
+rspec ./pruebas_rspec/rspec_pruebas.rb:102 # Fraccion#Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
+rake aborted!
+Command failed with status (1): [rspec -I. pruebas_rspec/rspec_pruebas.rb...]
+/home/alu4077/datos/homes.rala/LPP/prct06/Rakefile:5:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.0.0-p247/bin/ruby_noexec_wrapper:14:in `eval'
+/usr/local/rvm/gems/ruby-2.0.0-p247/bin/ruby_noexec_wrapper:14:in `<main>'
+Tasks: TOP => default => spec
+(See full trace by running task with --trace)
+
