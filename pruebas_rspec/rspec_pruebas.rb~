@@ -100,8 +100,6 @@ require "lib/racional.rb"
 
 	describe "#Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
 	  it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
-	    frac1 = @F 
-	    frac2 = @F1
 	    fracr = @F % @F1
 	    fracr.to_f.should eq(0.5714285714285714)
 	  end
