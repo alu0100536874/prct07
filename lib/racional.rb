@@ -3,6 +3,7 @@
 require "gcd.rb"
 
 class Fraccion
+  include Comparable
 
   attr_reader :num, :denom
   
@@ -130,44 +131,48 @@ class Fraccion
 
   #---------------------------------------------------------------------------------------------------------------------------------
 	
-	def > (fracaux)
-		if (self.to_f > fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-	
+# 	def > (fracaux)
+# 		if (self.to_f > fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 	
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def < (fracaux)
+# 		if (self.to_f < fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def >= (fracaux)
+# 		if (self.to_f >= fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 	
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def <= (fracaux)
+# 		if (self.to_f <= fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 		
   #---------------------------------------------------------------------------------------------------------------------------------
 	
-	def < (fracaux)
-		if (self.to_f < fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def >= (fracaux)
-		if (self.to_f >= fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-	
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def <= (fracaux)
-		if (self.to_f <= fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-		
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
+	def <=>(other)
+     self.to_f <=> other.to_f
+  end
+  
 end

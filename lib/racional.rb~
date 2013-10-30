@@ -3,6 +3,7 @@
 require "gcd.rb"
 
 class Fraccion
+  include Comparable
 
   attr_reader :num, :denom
   
@@ -15,14 +16,14 @@ class Fraccion
 	
  #---------------------------------------------------------------------------------------------------------------------------------
 	
-	def reducida
-	  mcd = gcd(@numerador, @denominador)
-	  if  divisor != 1
-	    @numerador = (@numerador / mcd )      #Simplificamos el numerador
-	    @denominador = (@denominador / mcd)   #Simplificamos el denominador
-	  end
-	end
-	
+# 	def reducida
+# 	  mcd = gcd(@numerador, @denominador)
+# 	  if  divisor != 1
+# 	    @numerador = (@numerador / mcd )      #Simplificamos el numerador
+# 	    @denominador = (@denominador / mcd)   #Simplificamos el denominador
+# 	  end
+# 	end
+# 	
   #---------------------------------------------------------------------------------------------------------------------------------
 	
 	def to_s
@@ -129,53 +130,45 @@ class Fraccion
 	end
 
   #---------------------------------------------------------------------------------------------------------------------------------
-# 	
-# 	def 
-# 	  
-# 	  frac = fracaux.num / fracaux.denom
-# 	  
+	
+# 	def > (fracaux)
+# 		if (self.to_f > fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
 # 	end
 # 	
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def > (fracaux)
-		if (self.to_f > fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-	
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def < (fracaux)
-		if (self.to_f < fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def >= (fracaux)
-		if (self.to_f >= fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-	
-  #---------------------------------------------------------------------------------------------------------------------------------
-	
-	def <= (fracaux)
-		if (self.to_f <= fracaux.to_f)
-			return true
-		else
-			return false
-		end
-	end
-		
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def < (fracaux)
+# 		if (self.to_f < fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def >= (fracaux)
+# 		if (self.to_f >= fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 	
+#   #---------------------------------------------------------------------------------------------------------------------------------
+# 	
+# 	def <= (fracaux)
+# 		if (self.to_f <= fracaux.to_f)
+# 			return true
+# 		else
+# 			return false
+# 		end
+# 	end
+# 		
   #---------------------------------------------------------------------------------------------------------------------------------
 	
 end
